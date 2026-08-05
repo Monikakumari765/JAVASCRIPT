@@ -4,6 +4,9 @@ function outer(){
         a++;
         console.log(a);
     }
-    inner();
+    // inner(); // This line is commented out, so inner() is not called here
+     return inner;
 }
-outer();
+let f1 = outer();
+console.log(f1); // This will log the inner function definition
+f1(); // This will call the inner function, which increments 'a' and logs it
