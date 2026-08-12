@@ -1,34 +1,45 @@
-// there is no return type;
+//  function are first class citizens 
+    // function are treated as value 
+    //  1 can store in variable 
+    // 2 pass an argument in another 
+    // 3 can return from function 
+// function foo(){
 
-function function_Name(){
-    console.log("some work");
-    return 5;
+// }
+// console.log(fun);
+// fun(); 
+// // error: fun is not a function  
+// // function expression 
+// var fun = function(){
+//   console.log("hello")
+// }
+
+// fun();
 
 
-} 
-function_Name();
+// function fun(a,b){
+//     console.log(a+b);
+// }
+// function foo(a){
+//     console.log(a);
+//     return fun;
+    // a(2,3);
+
+// fool(function(){})
+
+// foo(fun());
+// let result = foo(10);
+// console.log(result);
+// result(2,3);
 
 
-
-
-
-// how to pass parameter 
-function add(a,b){
-
-  return a+b;
-
+function foo(cb){
+    return cb;
 
 }
-let out=add("5",2);
-console.log(out);
-
-// default parameter 
-function add(a=2, b=3){
-    console.log(a,b);
-
-    return a+b;
-
+function fun(){
+    console.log("hello world");
 }
- let out2 = add(); 
-//  if you  do not pass the argument , the function will are default value 
-console.log(out2);
+let result=foo(fun);
+console.log(result());
+

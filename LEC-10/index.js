@@ -1,45 +1,20 @@
-//  function are first class citizens 
-    // function are treated as value 
-    //  1 can store in variable 
-    // 2 pass an argument in another 
-    // 3 can return from function 
-// function foo(){
-
-// }
-// console.log(fun);
-// fun(); 
-// // error: fun is not a function  
-// // function expression 
-// var fun = function(){
-//   console.log("hello")
-// }
-
-// fun();
-
-
-// function fun(a,b){
-//     console.log(a+b);
-// }
-// function foo(a){
-//     console.log(a);
-//     return fun;
-    // a(2,3);
-
-// fool(function(){})
-
-// foo(fun());
-// let result = foo(10);
-// console.log(result);
-// result(2,3);
-
-
-function foo(cb){
-    return cb;
-
+function outer(){
+    let a = 10;
+    // block scope variable a is created and initialized to 10
+    function inner (){
+        a++;
+        console.log(a);
+    }
+    // inner(); // This line is commented out, so inner() is not called here
+     return inner;
 }
-function fun(){
-    console.log("hello world");
-}
-let result=foo(fun);
-console.log(result());
 
+// closure  har baar naya banta hai 
+let f1 = outer(); 
+f1()
+f1()
+let f2 = outer();
+console.log(f1); // This will log the inner function definition
+f1(); 
+f2(); 
+f2();// This will call the inner function, which increments 'a' and logs it
