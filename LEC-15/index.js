@@ -35,6 +35,30 @@ function bill(){
 // sweets();
 // bill();
 
-starter(drinks );
+starter(function () {
+
+    drinks(function () {
+
+        maincourse(function () {
+
+            sweets(function () {
+
+                bill(function () {
+
+                    console.log("ghar jana h");
+
+                });
+
+            });
+
+        });
+
+    });
+
+});
+
 console.log("hi");
 
+// function should only responsible for their task 
+// disadvantages of call back --> callback hell -- nesting of multiple call back creates pyramid 
+//                                                 like structure which is hard to read and manage.
