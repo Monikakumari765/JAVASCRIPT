@@ -49,9 +49,10 @@ setTimeout(function(){
 
 
 // javascript is single-threaded language , meaning it can only execute one piece of code at a time.
-// bydeafault javascript is synchronous in nature .
+// by deafault javascript is synchronous in nature .
 // dsadvantage of synchronous code is that it can block the execution of other code.
 
 // event loop is a mechanism that allows JavaScript to perform non-blocking
 //  operations by offloading tasks to the system kernel whenever possible.
 // use of queue in event loop is to manage the execution of asynchronous code.
+// 
