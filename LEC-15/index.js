@@ -62,3 +62,7 @@ console.log("hi");
 // function should only responsible for their task 
 // disadvantages of call back --> callback hell -- nesting of multiple call back creates pyramid 
 //                                                 like structure which is hard to read and manage.
+// nesting of multiple functions creates call back hell.
+
+// alternate way to call back hell --> 1. promises - is a way to handle asynchronous operations 
+// is an object which represent eventual completion of an asynchronous task.
